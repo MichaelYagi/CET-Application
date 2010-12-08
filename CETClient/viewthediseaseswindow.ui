@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ViewTheDiseasesWindow</class>
+ <widget class="QDialog" name="ViewTheDiseasesWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>787</width>
+    <height>363</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>787</width>
+    <height>363</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>View Epidemic Cases</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>20</y>
+     <width>221</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Epidemic Cases</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>80</y>
+     <width>701</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>130</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Date</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Region</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Disease</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Number of Cases</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Edit</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>300</y>
+     <width>267</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QPushButton" name="pushButton">
+      <property name="text">
+       <string>Add New Disease Data</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="text">
+       <string>OK</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>ViewTheDiseasesWindow</receiver>
+   <slot>viewTheDiseasesWindowCancelButtonHandler()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>385</x>
+     <y>338</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>451</x>
+     <y>372</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ViewTheDiseasesWindow</receiver>
+   <slot>viewTheDiseasesWindowNewButtonHandler()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>346</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>238</x>
+     <y>389</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>viewTheDiseasesWindowCancelButtonHandler()</slot>
+  <slot>viewTheDiseasesWindowNewButtonHandler()</slot>
+ </slots>
+</ui>

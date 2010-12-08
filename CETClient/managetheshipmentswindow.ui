@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ManageTheShipmentsWindow</class>
+ <widget class="QDialog" name="ManageTheShipmentsWindow">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1559</width>
+    <height>497</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1559</width>
+    <height>497</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Manage Shipments</string>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>20</y>
+     <width>251</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Manage Shipments</string>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>80</y>
+     <width>1561</width>
+     <height>351</height>
+    </rect>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <attribute name="horizontalHeaderDefaultSectionSize">
+    <number>140</number>
+   </attribute>
+   <column>
+    <property name="text">
+     <string>Shipment #</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>From</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>To</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Type</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Quantity Requested</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Quantity Shipped</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Date Created</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Date Sent</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Date Received</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Date Cancelled</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Current Status</string>
+    </property>
+   </column>
+  </widget>
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>450</y>
+     <width>161</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create New Shipment</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_2">
+   <property name="geometry">
+    <rect>
+     <x>190</x>
+     <y>450</y>
+     <width>101</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageTheShipmentsWindow</receiver>
+   <slot>ManageTheShipmentsWindowCancelButtonHandler()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>246</x>
+     <y>465</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>249</x>
+     <y>425</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>ManageTheShipmentsWindow</receiver>
+   <slot>ManageTheShipmentsWindowSubmitButtonHandler()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>95</x>
+     <y>462</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>95</x>
+     <y>416</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>ManageTheShipmentsWindowCancelButtonHandler()</slot>
+  <slot>ManageTheShipmentsWindowSubmitButtonHandler()</slot>
+ </slots>
+</ui>
